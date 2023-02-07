@@ -5,7 +5,7 @@ import os
 def run_disc_bot():
     tkn = os.getenv('DISCORD_TOKEN')
 
-    print(tkn)
+    # print(tkn)
 
     intents = discord.Intents.default()
     intents.message_content = True
