@@ -33,13 +33,8 @@ def run_disc_bot():
             name = re.findall("\s\s*\w\w*", thing3[0])[1]
             to_send = "hi" + name + ", i am dadBot"
             await message.channel.send(to_send)
-        elif str(message.author) == "ER bot#2861":
-            await message.channel.send("my regex is better than yours")
-        elif str(message.author) == "jeremyliu#4616":
-            await message.channel.send("jermy")
-        elif str(message.author) == "zallada#8370":
-            print("DEBUG: father")
-            
+        # elif str(message.author) == "zallada#8370":
+        #     print("DEBUG: father")
             
 
     client.run(tkn)
