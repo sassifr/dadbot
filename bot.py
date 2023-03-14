@@ -18,9 +18,9 @@ def run_disc_bot():
     async def on_message(message):
         if message.author == client.user:
             return
-        thing = re.findall("[iI]m\s+\w+",message.content)
-        thing2 = re.findall("[iI]'m\s+\w+",message.content)
-        thing3 = re.findall("[iI]\s+am\s+\w+",message.content)
+        thing = re.findall("(^[iI]m\s+\w+|\s[iI]m\s+\w+)",message.content)
+        thing2 = re.findall("(^[iI]'m\s+\w+|\s[iI]'m\s+\w+)",message.content)
+        thing3 = re.findall("(^[iI]\s+am\s+\w+|\s[iI]\s+am\s+\w+)",message.content)
         if thing:
             name = re.findall("\s\s*\w\w*", thing[0])[0]
             to_send = "hi" + name + ", im dadBot"
